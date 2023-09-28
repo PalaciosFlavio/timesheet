@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asignar Tareas al Proyecto</title>
+    <nav>
+        <a href="index.html">Login</a>
+        <a href="mostrar.php">Tabla de usuarios</a>
+        <a href="tareas.html">Crear y borrar tarea</a>
+       
+    </nav>
+</head>
+<body>
+    <h1>Asignar Tareas al Proyecto</h1>
+
+    <form id="taskForm">
+        <label for="taskName">Nombre de la Tarea:</label>
+        <input type="text" id="taskName" required>
+        <br>
+
+        <label for="taskDescription">Descripción de la Tarea:</label>
+        <textarea id="taskDescription" required></textarea>
+        <br>
+
+        <label for="taskHours">Horas Requeridas:</label>
+        <input type="number" id="taskHours" required>
+        <br>
+
+        <button type="button" onclick="addTask()">Agregar Tarea</button>
+        <button type="button" onclick="deleteTask()">Borrar Tarea</button>
+    </form>
+
+    <h2>Tareas Asignadas</h2>
+    <ul id="taskList"></ul>
+
+    <script>
+        function addTask() {
+            const taskName = document.getElementById("taskName").value;
+            const taskDescription = document.getElementById("taskDescription").value;
+            
+            if (taskName && taskDescription) {
+                const taskList = document.getElementById("taskList");
+                const taskItem = document.createElement("li");
+                taskItem.innerHTML = `<strong>${taskName}:</strong> ${taskDescription}`;
+                taskList.appendChild(taskItem);
+
+                document.getElementById("taskForm").reset();
+            } else {
+                alert("Por favor, complete todos los campos.");
+            }
+        }
+
+        function deleteTask() {
+            const taskList = document.getElementById("taskList");
+            const taskItems = taskList.getElementsByTagName("li");
+            
+            if (taskItems.length > 0) {
+                taskList.removeChild(taskItems[taskItems.length - 1]);
+            } else {
+                alert("No hay tareas para borrar.");
+            }
+        }
+    </script>
+</body>
+</html>

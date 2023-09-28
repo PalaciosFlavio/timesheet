@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Proyecto/Mantenimiento</title>
+    <link rel="stylesheet" href="styleProy.css">
+</head>
+<body>
+    <header>
+        <h1>Formulario de Proyecto/Mantenimiento</h1>
+    </header>
+    <div class="container">
+        <header class="encabezado">
+            <div class="wrap">
+                <div class="logos">
+                    Asignar Proyectos
+                </div>
+                <nav>
+                    <a href="index.html">Login</a>
+                    <a href="mostrarProyectos.php">Tabla de Proyectos</a>
+                </nav>
+            </div>
+        </header>
+        <form id="asig-form" action="asignarProyecto.php" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="txtNombre" required>
+
+            <label for="tipo">Tipo:</label>
+            <select id="tipo" name="txtTipo" required>
+                <option value="proyecto">Proyecto</option>
+                <option value="mantenimiento">Mantenimiento</option>
+            </select>
+
+            <label for="comercial">Responsable Comercial:</label>
+            <input type="text" id="comercial" name="txtComercial" required>
+
+            <label for="gestion">Responsable de Gestión:</label>
+            <input type="text" id="gestion" name="txtGestion" required>
+
+            <label for="inicio_ideal">Fecha de Inicio Ideal:</label>
+            <input type="date" id="inicio_ideal" name="txtInicio_ideal" required>
+
+            <label for="inicio_real">Fecha de Inicio Real:</label>
+            <input type="date" id="inicio_real" name="txtInicio_real" required>
+
+            <label for="fin_ideal">Fecha de Fin Ideal:</label>
+            <input type="date" id="fin_ideal" name="txtFin_ideal" required>
+
+            <label for="fin_real">Fecha de Fin Real:</label>
+            <input type="date" id="fin_real" name="txtFin_real" required>
+
+            <label for="recursos">Listado de Recursos Asignados:</label>
+            <input type="text" id="recursos" name="txtRecursos" required>
+
+            <label for="dedicacion">Horas dedicadas:</label>
+            <input type="text" id="dedicacion" name="txtDedicacion" required>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

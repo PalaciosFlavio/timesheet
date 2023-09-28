@@ -1,0 +1,13 @@
+CREAR LA BASE DE DATOS
+
+1) abrir el archivo bd.sql
+2) copiarlo
+3) pegarlo en xampp 
+
+ABRIR EL LOCALHOST
+
+1) ir a ubicacion del archivo de xampp (normalmente esta en C: -> xampp)
+2) ir a la carpeta htdocs
+3) arrastrar la carpeta entera del proyecto hasta ahi
+4) ir a cualquier navegador (recomiendo que sea el mismo en el que se ejecute el localhost/phpmyadmin de xampp)
+5) y poner localhost/proyecto
